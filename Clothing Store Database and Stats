@@ -1,0 +1,32 @@
+--Create a Clothing Store Database
+
+CREATE TABLE clothing(id INTEGER PRIMARY KEY, item_type TEXT, quantity INTEGER, price INTEGER, size TEXT); 
+
+INSERT INTO clothing VALUES (1, "Dress", 50, 50.00, "S, M, L");
+INSERT INTO clothing VALUES (2, "Dress pants", 25,30.00, "S, M, L");
+INSERT INTO clothing VALUES (3, "Shirts", 100, 20.00, "S, M, L");
+INSERT INTO clothing VALUES (4, "Leggings", 200, 10.00, "S, M, L");
+INSERT INTO clothing VALUES (5, "Sweat pants", 55, 10.00, "S, M, L");
+INSERT INTO clothing VALUES (6, "Bras", 150, 32.00, "S, M, L");
+INSERT INTO clothing VALUES (7, "Underwear", 150, 20.00, "S, M, L");
+INSERT INTO clothing VALUES (8, "Jeans", 100, 50.00, "S, M, L");
+INSERT INTO clothing VALUES (9, "Shoes", 300, 100.00, "7, 8");
+INSERT INTO clothing VALUES (10, "Socks", 75, 10.00, "S, M, L");
+INSERT INTO clothing VALUES (11, "Sweaters", 45, 60.00, "S, M, L");
+INSERT INTO clothing VALUES (12, "Tank tops", 25, 15.00, "S, M, L");
+INSERT INTO clothing Values (13, "Pull overs", 75, 55.00, "S, M, L");
+INSERT INTO clothing VALUES (14, "Bikini", 50, 25.00, "S, M, L");
+INSERT INTO clothing Values (15, "Shorts", 85, 35.00, "S, M, L");
+
+--Display the database ordered by price.
+SELECT * FROM clothing
+ORDER BY price desc;
+
+--Display the database ordered by id.
+SELECT* FROM clothing
+ORDER By id;
+
+--Average price of items from the quanities.
+SELECT AVG (price) "avg item price"
+FROM clothing
+WHERE quantity;
